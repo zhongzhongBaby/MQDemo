@@ -1,0 +1,18 @@
+spring:
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    virtual-host: /vhost_gyz
+    username: gengyuzhong
+    password: 123456
+    listener:
+      simple:
+        prefetch: 1
+
+
+server:
+  port: 9532
+  servlet:
+    context-path: /
+
+
