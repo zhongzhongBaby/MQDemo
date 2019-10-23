@@ -13,6 +13,6 @@ public class OrderController {
     @RequestMapping(value = "/addOrder", method = RequestMethod.GET)
     public String nihao1() {
         sender.send();
-        return "已经下单，请在三秒内完成支付，负责订单将自动关闭";
+        return "已经下单，请在50秒内完成支付，负否订单将自动关闭";
     }
 }

@@ -20,6 +20,7 @@ public class OrderOverTimeConfig {
     @Bean(name = "message_order")
     public Queue message_order() {
         Map<String, Object> arguments = new HashMap<>();
+        //为队列配置消息过期时间和死信交换
         arguments.put("x-dead-letter-exchange", "exchange_deadMessage");
         //arguments.put("x-dead-letter-routing-key", "routing_dead");
         arguments.put("x-message-ttl", 50000);
@@ -42,7 +43,7 @@ public class OrderOverTimeConfig {
     }
 
     /**
-     * 绑定队列到交换器
+     * 绑定队列到死信交换器
      *
      * @return
      */
